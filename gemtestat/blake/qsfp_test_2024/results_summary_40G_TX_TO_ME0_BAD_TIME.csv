@@ -1,0 +1,4 @@
+timestamp,qsfp_id,channel,source_id,num_bits,num_bits_str,sensitivity_pre_fec,sensitivity_post_fec,temp_at_pre_fec_sens,temp_at_post_fec_sens,options
+20230324-211209,Vitex_VTX00151,OH0_GBT0,ME0_0,3000000000000,3*10**12,-17.64,-15.64,30.91796875,30.08984375,no_switching 
+20230324-212211,Vitex_VTX00151,OH0_GBT0,ME0_0,3000000000000,3*10**12,-17.61,-16.11,30.1953125,29.8828125,no_switching 
+20230324-212757,Vitex_VTX00151,OH0_GBT0,ME0_0,3000000000000,3*10**12,-17.78,-17.28,29.98828125,29.83203125,no_switching 

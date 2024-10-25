@@ -1,0 +1,181 @@
+>>> from board.manager import *
+>>> import tableformatter as tf
+>>> from common.utils import *
+>>> import time
+>>> x2o_manager = manager(optical_add_on_ver=2)
+>>> qsfps = x2o_manager.peripheral.autodetect_optics(verbose=False)
+>>> qsfps[29].select()
+>>> qsfp = qsfps[29]
+>>> qsfp.select()
+>>> reg195 = qsfp.read_reg(0, 195)
+>>> reg195
+254
+>>> reg195 & 0x20
+32
+>>> (reg195 & 0x20) >> 5
+1
+>>> reg221 = qsfp.read_reg(0, 221)
+>>> reg221 & 4
+0
+>>> reg221 & 8
+8
+>>> qsfp=qsfps[18]
+>>> qsfp.select()
+>>> reg140=qsfp.read_reg(0, 140)
+>>> reg140
+255
+>>> qsfp.read_reg(0, 222)
+103
+>>> 103*250
+25750
+>>> qsfp.read_reg(0, 141)
+2
+>>> qsfp.read_reg(0, 131)
+128
+>>> qsfp.read_reg(0, 193)
+15
+>>> qsfp.read_reg(0, 194)
+255
+>>> qsfp.read_reg(0, 195)
+254
+>>> qsfp.read_reg(0, 87)
+170
+>>> qsfp.write_reg(0, 87, 0x55)
+>>> qsfp.write_reg(0, 87, 0xAA)
+>>> qsfp.write_reg(0, 87, 0x00)
+>>> qsfp.write_reg(0, 87, 0xFF)
+>>> qsfp.write_reg(0, 87, 0xAA)
+>>> qsfp.read_reg(0, 88)
+170
+>>> qsfp.write_reg(0, 88, 0x55)
+>>> qsfp.write_reg(0, 88, 0xFF)
+>>> qsfp.write_reg(0, 88, 0x00)
+>>> qsfp.write_reg(0, 88, 0xAA)
+>>> qsfp.read_reg(3, 224)
+167
+>>> qsfp.read_reg(3, 225)
+15
+>>> qsfp.read_reg(3, 227)
+8
+>>> qsfp.read_reg(3, 236)
+51
+>>> qsfp.read_reg(3, 237)
+51
+>>> qsfp.write_reg(3, 237, 0)
+>>> qsfp.write_reg(3, 238, 0)
+>>> qsfp.write_reg(3, 238, 0x33)
+>>> qsfp.write_reg(3, 237, 0x33)
+>>> qsfp.read_reg(3, 239)
+34
+>>> qsfp.write_reg(3, 238, 34)
+>>> qsfp.read_reg(3, 236)
+51
+>>> qsfp.read_reg(3, 237)
+51
+>>> qsfp.write_reg(3, 237, 0)
+>>> qsfp.write_reg(3, 237, 0x11)
+>>> qsfp.write_reg(3, 237, 0x33)
+>>> qsfp.write_reg(3, 237, 0x22)
+>>> qsfp.write_reg(3, 237, 0x44)
+>>> qsfp.write_reg(3, 237, 0x55)
+>>> qsfp.write_reg(3, 237, 0x00)
+>>> qsfp.read_reg(3, 239)
+34
+>>> qsfp.write_reg(3, 239, 0x00)
+>>> qsfp.write_reg(3, 239, 0x11)
+>>> qsfp.write_reg(3, 239, 0x22)
+>>> qsfp.write_reg(3, 239, 0x33)
+>>> qsfp.write_reg(3, 239, 0x22)
+>>> qsfp.write_reg(3, 239, 0x11)
+>>> qsfp.write_reg(3, 239, 0x00)
+>>> qsfp.write_reg(3, 239, 0x22)
+>>> qsfp.read_reg(3, 240)
+0
+>>> qsfp.write_reg(3, 240, 0xff)
+>>> qsfp.write_reg(3, 240, 0x00)
+>>> qsfp.write_reg(3, 240, 0xff)
+>>> qsfp.write_reg(3, 240, 0x00)
+>>> qsfp.write_reg(3, 240, 0xff)
+>>> qsfp.write_reg(3, 239, 0x33)
+>>> qsfp.write_reg(3, 239, 0x22)
+>>> qsfp.read_reg(3, 220)
+0
+>>> qsfp.write_reg(3, 236, 0x0)
+>>> qsfp.write_reg(3, 237, 0x0)
+>>> qsfp.write_reg(3, 236, 0x0)
+>>> qsfp.write_reg(3, 237, 0x0)
+>>> qsfp.write_reg(3, 240, 0xf0)
+>>> qsfp.write_reg(3, 240, 0x0)
+>>> qsfp.write_reg(3, 240, 0xf0)
+>>> qsfp.write_reg(3, 240, 0x0)
+>>> qsfp.write_reg(3, 240, 0xf0)
+>>> qsfp.write_reg(3, 240, 0x0)
+>>> qsfp.write_reg(3, 240, 0xf0)
+>>> qsfp.write_reg(3, 240, 0x0)
+>>> qsfp.write_reg(3, 240, 0xf0)
+>>> qsfp.write_reg(3, 240, 0x0)
+>>> qsfp.write_reg(3, 236, 0x0)
+>>> qsfp.write_reg(3, 237, 0x0)
+>>> qsfp.write_reg(3, 236, 0x0)
+>>> qsfp.write_reg(3, 237, 0x0)
+>>> qsfp.write_reg(3, 236, 0x0)
+>>> qsfp.write_reg(3, 237, 0x0)
+>>> qsfp=qsfps[20]
+>>> qsfp.select()
+>>> qsfp.write_reg(3, 236, 0x0)
+>>> qsfp.write_reg(3, 237, 0x0)
+>>> qsfp.read_reg(3, 236)
+0
+>>> qsfp.read_reg(3, 237)
+0
+>>> qsfp.read_reg(3, 236)
+51
+>>> qsfp.write_reg(3, 236, 0x0)
+>>> qsfp.write_reg(3, 237, 0x0)
+>>> qsfp.read_reg(3, 236)
+51
+>>> qsfp.write_reg(3, 236, 0x0)
+>>> qsfp.write_reg(3, 237, 0x0)
+>>> qsfp.read_reg(3, 236)
+51
+>>> qsfp.write_reg(3, 236, 0x0)
+>>> qsfp.write_reg(3, 237, 0x0)
+>>> qsfp.read_reg(3, 236)
+51
+>>> qsfp.write_reg(3, 236, 0x0)
+>>> qsfp.write_reg(3, 237, 0x0)
+>>> qsfp.read_reg(3, 236)
+0
+>>> qsfp.read_reg(3, 237)
+0
+>>> qsfp.write_reg(3, 236, 0x11)
+>>> qsfp.write_reg(3, 237, 0x11)
+>>> qsfp.write_reg(3, 236, 0x22)
+>>> qsfp.write_reg(3, 237, 0x22)
+>>> qsfp.write_reg(3, 236, 0x33)
+>>> qsfp.write_reg(3, 237, 0x33)
+>>> qsfp.write_reg(3, 239, 0x33)
+>>> qsfp.write_reg(3, 239, 0x00)
+>>> qsfp.read_reg(3, 241)
+15
+>>> qsfp.read_reg(3, 241, 0xff)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: read_reg() takes 3 positional arguments but 4 were given
+>>> qsfp.write_reg(3, 241, 0xff)
+>>> qsfp.write_reg(3, 236, 0x0)
+>>> qsfp.write_reg(3, 237, 0x0)
+>>> qsfp.read_reg(3, 224)
+167
+>>> qsfp.read_reg(3, 225)
+15
+>>> qsfp.read_reg(0, 193)
+15
+>>> qsfp.read_reg(0, 87)
+170
+>>> qsfp.write_reg(0, 87, 0x55)
+>>> qsfp.write_reg(3, 236, 0x0)
+>>> qsfp.write_reg(3, 237, 0x0)
+>>> qsfp.write_reg(3, 236, 0x0)
+>>> qsfp.write_reg(3, 237, 0x0)
+

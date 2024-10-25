@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Aug 16 13:32:45 2024
+# Process ID: 4036
+# Current directory: /home/gemtest/blake/qsfp_test_2024
+# Command line: vivado -mode batch -source get_dna.tcl
+# Log file: /home/gemtest/blake/qsfp_test_2024/vivado.log
+# Journal file: /home/gemtest/blake/qsfp_test_2024/vivado.jou
+#-----------------------------------------------------------
+source get_dna.tcl
+# open_hw_manager
+# connect_hw_server -url 10.0.0.11
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:10.0.0.11:3121
+ERROR: [Labtools 27-2223] Unable to connect to hw_server with URL "TCP:10.0.0.11:3121".
+Resolution: 1. Check the host name, port number and network connectivity.
+2. Check to ensure the hw_server is running on the target.
+ERROR: [Common 17-39] 'connect_hw_server' failed due to earlier errors.
+
+    while executing
+"connect_hw_server -url 10.0.0.11"
+    (file "get_dna.tcl" line 3)
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 16 13:32:52 2024...

@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Aug 16 13:36:40 2024
+# Process ID: 4479
+# Current directory: /home/gemtest/blake/qsfp_test_2024
+# Command line: vivado
+# Log file: /home/gemtest/blake/qsfp_test_2024/vivado.log
+# Journal file: /home/gemtest/blake/qsfp_test_2024/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_hw_manager
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'.
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2021.1
+  **** Build date : Jun 10 2021 at 20:11:57
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2021.1
+  ****** Build date   : May 26 2021-12:32:33
+    **** Build number : 2021.1.1622050353
+      ** Copyright 2017-2024 Xilinx, Inc. All Rights Reserved.
+
+
+
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:10.0.0.11:12333
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+ERROR: [Labtools 27-2223] Unable to connect to hw_server with URL "TCP:10.0.0.11:12333".
+Resolution: 1. Check the host name, port number and network connectivity.
+2. Check to ensure the hw_server is running on the target.
+connect_hw_server: Time (s): cpu = 00:00:09 ; elapsed = 00:03:25 . Memory (MB): peak = 7687.469 ; gain = 7.031 ; free physical = 43030 ; free virtual = 59262
+INFO: [Common 17-344] 'connect_hw_server' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 16 13:41:00 2024...

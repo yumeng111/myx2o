@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Aug 16 15:40:23 2024
+# Process ID: 12686
+# Current directory: /home/gemtest/blake/qsfp_test_2024
+# Command line: vivado
+# Log file: /home/gemtest/blake/qsfp_test_2024/vivado.log
+# Journal file: /home/gemtest/blake/qsfp_test_2024/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_hw_manager
+connect_hw_server -allow_non_jtag

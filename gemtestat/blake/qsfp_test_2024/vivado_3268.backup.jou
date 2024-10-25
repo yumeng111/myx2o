@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Aug 16 13:31:34 2024
+# Process ID: 3268
+# Current directory: /home/gemtest/blake/qsfp_test_2024
+# Command line: vivado -mode batch -source /home/gemtest/0xbefe/scripts/dev/vivado_program_fpga.tcl x2o_test.xml 10.0.0.11:12333
+# Log file: /home/gemtest/blake/qsfp_test_2024/vivado.log
+# Journal file: /home/gemtest/blake/qsfp_test_2024/vivado.jou
+#-----------------------------------------------------------
+source /home/gemtest/0xbefe/scripts/dev/vivado_program_fpga.tcl
