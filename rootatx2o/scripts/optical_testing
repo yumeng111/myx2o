@@ -1,0 +1,14 @@
+import rpyc
+
+conn = rpyc.classic.connect("10.0.0.100", port=12333)
+
+power_meter = conn.modules["measure_power"]
+power_meter.configure() # configures power meter
+#power_meter.measure(10, "dBm")  # 1 measurement, parameters: average_count(default=10), units(default="W")
+power_meter.multi_measure(100, 10, "W") # parameters: iterations, average_count(default=10), units(default="W")  
+print("Mean Power: ", power_meter.mean()) # returns mean
+print("Median Power: ", power_meter.median()) # returns median
+power_meter.to_csv() # saves data in csv file
+power_meter.plot_data() # plots data as power vs. time
+power_meter.histogram() # plots data in histogram
+

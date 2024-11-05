@@ -1,0 +1,150 @@
+GE2/1 GBT1 chip detected
+
+>>>>>>> TEST: READING GBTX SERIAL NUMBER FROM THE TEST FUSES <<<<<<<
+PASS: GBTX serial number is not zero: 38308 (test fuse1 = 0xa4, test fuse2 = 0x95)
+
+>>>>>>> TEST: GBTX STATE CHECK <<<<<<<
+ERROR: GBTX state is waitXPLLLock, while pauseForConfig state is expected on a blank chip
+This can sometimes happen on a blank chip if the chip has not powered up correctly, please power-cycle and try again. If the error continues after multiple power-cycles, set this board aside for investigation.
+IMPORTANT: don't forget to disconnect the dongle from the computer before power cycling the OH
+
+>>>>>>> TEST: CHECK IF THE 'UPDATE FROM FUSES' BIT IS SET (EXPECT 0 FOR BLANK CHIP, AND 1 FOR FUSED CHIP) <<<<<<<
+PASS: fuse update enable bit is set to 0 as expected
+
+>>>>>>> READING CONFIGURATION FILE ../../RESOURCES/GE21_GBT1_CONFIG.TXT <<<<<<<
+
+>>>>>>> CONFIGURING GBTX... <<<<<<<
+Configuration DONE
+
+>>>>>>> READING GBTX CONFIGURATION FROM THE CHIP, AND COMPARING TO THE EXPECTED CONFIGURATION <<<<<<<
+   Configuration register 9 does not match the expected value, read 0x00, expect 0x80
+   Configuration register 10 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 11 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 12 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 13 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 14 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 25 does not match the expected value, read 0x11, expect 0x03
+   Configuration register 26 does not match the expected value, read 0xff, expect 0x7f
+   Configuration register 27 does not match the expected value, read 0xff, expect 0x28
+   Configuration register 28 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 29 does not match the expected value, read 0xff, expect 0x15
+   Configuration register 39 does not match the expected value, read 0x00, expect 0x08
+   Configuration register 40 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 41 does not match the expected value, read 0xff, expect 0x20
+   Configuration register 42 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 43 does not match the expected value, read 0xff, expect 0x80
+   Configuration register 44 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 55 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 56 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 57 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 58 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 59 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 70 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 71 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 72 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 73 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 74 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 85 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 86 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 87 does not match the expected value, read 0xff, expect 0x3f
+   Configuration register 88 does not match the expected value, read 0xff, expect 0xdd
+   Configuration register 89 does not match the expected value, read 0xff, expect 0x0d
+   Configuration register 100 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 101 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 102 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 103 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 104 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 115 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 116 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 117 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 118 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 119 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 129 does not match the expected value, read 0x00, expect 0x11
+   Configuration register 131 does not match the expected value, read 0xff, expect 0x11
+   Configuration register 132 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 133 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 134 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 145 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 146 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 147 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 148 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 149 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 159 does not match the expected value, read 0x00, expect 0x3f
+   Configuration register 160 does not match the expected value, read 0x11, expect 0xdd
+   Configuration register 161 does not match the expected value, read 0xff, expect 0x0d
+   Configuration register 162 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 163 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 164 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 175 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 176 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 177 does not match the expected value, read 0xff, expect 0x11
+   Configuration register 178 does not match the expected value, read 0xff, expect 0x11
+   Configuration register 179 does not match the expected value, read 0xff, expect 0x11
+   Configuration register 190 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 191 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 192 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 193 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 194 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 205 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 206 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 207 does not match the expected value, read 0xff, expect 0x3f
+   Configuration register 208 does not match the expected value, read 0xff, expect 0xdd
+   Configuration register 209 does not match the expected value, read 0xff, expect 0x0d
+   Configuration register 220 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 221 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 222 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 223 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 224 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 235 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 236 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 237 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 238 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 239 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 250 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 251 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 252 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 253 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 254 does not match the expected value, read 0xff, expect 0x7c
+   Configuration register 266 does not match the expected value, read 0xff, expect 0x0f
+   Configuration register 267 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 268 does not match the expected value, read 0xff, expect 0x11
+   Configuration register 269 does not match the expected value, read 0xff, expect 0x08
+   Configuration register 280 does not match the expected value, read 0x11, expect 0x00
+   Configuration register 281 does not match the expected value, read 0xff, expect 0x15
+   Configuration register 282 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 283 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 284 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 294 does not match the expected value, read 0x00, expect 0xff
+   Configuration register 295 does not match the expected value, read 0x11, expect 0xff
+   Configuration register 296 does not match the expected value, read 0xff, expect 0x40
+   Configuration register 297 does not match the expected value, read 0xff, expect 0x40
+   Configuration register 298 does not match the expected value, read 0xff, expect 0x40
+   Configuration register 299 does not match the expected value, read 0xff, expect 0x2a
+   Configuration register 309 does not match the expected value, read 0x00, expect 0x40
+   Configuration register 310 does not match the expected value, read 0x11, expect 0x2a
+   Configuration register 311 does not match the expected value, read 0xff, expect 0x2a
+   Configuration register 312 does not match the expected value, read 0xff, expect 0x2a
+   Configuration register 313 does not match the expected value, read 0xff, expect 0x5d
+   Configuration register 314 does not match the expected value, read 0xff, expect 0x5d
+   Configuration register 324 does not match the expected value, read 0x00, expect 0xff
+   Configuration register 325 does not match the expected value, read 0x11, expect 0xff
+   Configuration register 327 does not match the expected value, read 0xff, expect 0x99
+   Configuration register 328 does not match the expected value, read 0xff, expect 0x99
+   Configuration register 329 does not match the expected value, read 0xff, expect 0x99
+   Configuration register 339 does not match the expected value, read 0x00, expect 0x11
+   Configuration register 341 does not match the expected value, read 0xff, expect 0x0f
+   Configuration register 342 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 343 does not match the expected value, read 0xff, expect 0x11
+   Configuration register 344 does not match the expected value, read 0xff, expect 0x0f
+   Configuration register 354 does not match the expected value, read 0x00, expect 0x11
+   Configuration register 356 does not match the expected value, read 0xff, expect 0x0f
+   Configuration register 357 does not match the expected value, read 0xff, expect 0x00
+   Configuration register 358 does not match the expected value, read 0xff, expect 0x11
+   Configuration register 359 does not match the expected value, read 0xff, expect 0x0f
+ERROR: Readback configuration does not match the expected configuration
+
+>>>>>>> TEST: GBTX STATE CHECK <<<<<<<
+ERROR: GBTX state is waitXPLLLock, while IDLE state is expected on a fused chip
+This means that the chip is not locked to the GBT data stream coming from the backend. There can be many causes for that, including bad fiber connection, bad chip configuration, etc..
+
+>>>>>>> TEST: READING GBTX ERROR COUNTERS IN A 10 SECOND TIME WINDOW <<<<<<<
