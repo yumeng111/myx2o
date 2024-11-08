@@ -8,7 +8,7 @@ import time
 
 #external files
 from tx_measurements import collect_tx_vars
-from rx_measurements import collect_rx_vars, find_attenuation_threshold
+from rx_measurements import collect_rx_vars, find_attenuation_threshold, configure_PRBS
 
 X2O_IP = "10.0.0.11"
 SPEC_POWER = -11.1
@@ -40,6 +40,7 @@ class QSFP_RX_CHAN:
     def measure(self, chan, att, opm, switch, voa, rw, x2o_gbt, x2o_utils, att_type = "spec"):
         if(att_type == "spec"):
             self.data_spec = collect_rx_vars(chan, opm, switch, rw, x2o_gbt, x2o_utils)
+            print(f"CHAN{chan}")
         else:
             self.data_extended = collect_rx_vars(chan, opm, switch, rw, x2o_gbt, x2o_utils)
 
@@ -243,7 +244,8 @@ if __name__ == "__main__":
  
     #************QSFPs*************
     print("\nCollecting QSFP data.")
-
+    #configure PRBS
+    configure_PRBS(rw, x2o_gbt, x2o_utils)
     # --TX--
     """
     print("\nTransmiters:")
